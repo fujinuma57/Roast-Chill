@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>予約フォーム</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <section class="reservation-section fade-in">
+    <h2 class="section-title">ご予約フォーム</h2>
+
+    <form id="reservationForm" class="reservation-form">
+      <label>お名前
+        <input type="text" name="name" required />
+      </label>
+
+      <label>メールアドレス
+        <input type="email" name="email" required />
+      </label>
+
+      <label>希望日時
+        <input type="datetime-local" name="datetime" required />
+      </label>
+
+      <label>ご要望（任意）
+        <textarea name="message" rows="4"></textarea>
+      </label>
+
+      <input type="hidden" name="_subject" value="Webから予約がありました！" />
+      <button type="submit" class="submit-button">📩 予約する</button>
+
+      <p id="successMessage" class="success-message" style="display: none;">
+        ✅ 送信が完了しました！
+      </p>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
